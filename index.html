@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>ササノアビス</title>
+<!-- ?v= は更新のたびに上げる（スマホなどに残った古いファイルが混ざって動かなくなるのを防ぐ。2026-10-16） -->
+<link rel="stylesheet" href="style.css?v=20261111a">
+</head>
+<body>
+<div id="app">
+  <canvas id="world"></canvas>
+  <canvas id="world3d" style="display:none"></canvas>
+  <canvas id="fx"></canvas>
+
+  <div id="hud" style="display:none">
+    <div id="hudTop">
+      <div id="hudBars">
+        <div class="bar hp"><div id="hpFill"></div><span id="hpText"></span></div>
+        <div class="bar xp"><div id="xpFill"></div><span id="lvText"></span></div>
+      </div>
+      <div id="hudInfo">
+        <span id="floorText"></span>
+        <span id="timerText"></span>
+        <span id="sasaText"></span>
+      </div>
+      <div id="questChip" style="display:none"></div>
+      <div class="bar boss" id="bossBar" style="display:none"><div id="bossFill"></div><span id="bossName"></span></div>
+    </div>
+    <div id="specialAnnounce" role="status" aria-live="polite" style="display:none"></div>
+    <button id="btnSp" type="button"><span id="btnSpLabel">必殺</span><span id="btnSpKey">Space</span></button>
+    <div id="fpsText"></div>
+    <div id="choicePanel" style="display:none" role="dialog" aria-label="強化をえらぶ">
+      <div class="choice-box">
+        <div id="choiceTitle"></div>
+        <div id="choiceSub"></div>
+        <button class="choice-card" type="button" data-i="0"><span class="cc-num">1</span><span class="cc-body"><span class="cc-name"></span><span class="cc-desc"></span><span class="cc-now"></span></span></button>
+        <button class="choice-card" type="button" data-i="1"><span class="cc-num">2</span><span class="cc-body"><span class="cc-name"></span><span class="cc-desc"></span><span class="cc-now"></span></span></button>
+        <button class="choice-card" type="button" data-i="2"><span class="cc-num">3</span><span class="cc-body"><span class="cc-name"></span><span class="cc-desc"></span><span class="cc-now"></span></span></button>
+      </div>
+    </div>
+    <div id="boxPanel" role="status" aria-live="polite" style="display:none">
+      <div class="bx-stage">
+        <div class="bx-found" id="boxFound"></div>
+        <div class="bx-glow"></div>
+        <div class="bx-rays"></div>
+        <div class="bx-box">
+          <div class="bx-inside"></div>
+          <div class="bx-cardwrap">
+            <div class="bx-card">
+              <div class="bx-rar" id="boxRar"></div>
+              <div class="bx-name" id="boxName"></div>
+              <div class="bx-stat" id="boxStat"></div>
+              <div class="bx-sub" id="boxSub"></div>
+              <div class="bx-sasa" id="boxSasa"></div>
+            </div>
+          </div>
+          <div class="bx-lid"><i class="bx-f bx-ft"></i><i class="bx-f bx-fb"></i><i class="bx-f bx-fl"></i><i class="bx-f bx-fr"></i><i class="bx-band"></i></div>
+          <div class="bx-wall"></div>
+        </div>
+      </div>
+      <div class="bx-confetti" id="boxConfetti"></div>
+    </div>
+  </div>
+
+  <div id="menu"></div>
+</div>
+<script src="budoux-ja.min.js?v=20261111a"></script>
+<script src="data.js?v=20261111a"></script>
+<script src="audio.js?v=20261111a"></script>
+<script src="sprites.js?v=20261111a"></script>
+<script src="vendor/three.min.js?v=20261111a"></script>
+<script src="fxcore.js?v=20261111a"></script>
+<script src="world.js?v=20261111a"></script>
+<script src="render3d.js?v=20261111a"></script>
+<script src="village3d.js?v=20261111a"></script>
+<script src="run.js?v=20261111a"></script>
+<script src="village.js?v=20261111a"></script>
+<script src="book.js?v=20261111a"></script>
+<script src="ui.js?v=20261111a"></script>
+<script src="main.js?v=20261111a"></script>
+</body>
+</html>
